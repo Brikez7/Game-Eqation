@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace WPF
+{
+    /// <summary>
+    /// Interaction logic for PRecordes.xaml
+    /// </summary>
+    public partial class PRecordes : Window
+    {
+        public PRecordes()
+        {
+            InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BBack_Click(object sender, RoutedEventArgs e)
+        {
+            WindowMethods.ShowMain(this);
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            WindowMethods.Exit();
+        }
+    }
+}

@@ -39,5 +39,10 @@ namespace WPF
         {
             WindowMethods.Exit();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

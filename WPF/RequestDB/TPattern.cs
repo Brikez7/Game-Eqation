@@ -6,9 +6,9 @@ namespace WPF.RequestDB
 {
     internal class TPattern
     {
-        private string _name;
-        private SqlDataAdapter _sqlAdapter;
-        private DataTable _sqlTable;
+        protected string _name;
+        protected SqlDataAdapter _sqlAdapter;
+        protected DataTable _sqlTable;
 
         public TPattern(string name, SqlDataAdapter sqlAdapter, DataTable sqlTable)
         {
@@ -17,7 +17,7 @@ namespace WPF.RequestDB
             _sqlTable = sqlTable;
         }
 
-        public string[] GetColums(SqlConnection sqlConnection)
+        public string[] getColums(SqlConnection sqlConnection)
         {
             List<string> colums = new List<string>();
 
@@ -31,15 +31,18 @@ namespace WPF.RequestDB
             }
             return colums.ToArray();
         }
-        public DataView CompletionTable(SqlConnection sqlConnection) 
+        public DataView getTableView()
+        {
+            _sqlTable = new DataTable();
+            _sqlAdapter.Fill(_sqlTable);
+            return _sqlTable.DefaultView;
+        }
+
+        private void readData(SqlConnection sqlConnection)
         {
             SqlCommand cmdView = new SqlCommand($"SELECT * FROM [{_name}]", sqlConnection);
             _sqlTable = new DataTable();
             _sqlAdapter = new SqlDataAdapter(cmdView);
-
-            _sqlTable = new DataTable();
-            _sqlAdapter.Fill(_sqlTable);
-            return _sqlTable.DefaultView;
         }
     }
 }

@@ -13,7 +13,7 @@
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}" Width="893" Height="431" Foreground="Red"
-        Title="Главное меню" FontSize="14" FontStyle="Normal" Closed="Window_Closed">
+        Title="Главное меню" FontSize="14" FontStyle="Normal" Closed="Window_Closed" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen">
     <Grid VerticalAlignment="Center" Height="427">
         <Button x:Name="BAutorisation" Content="вход" HorizontalAlignment="Center" Height="60" Width="370" Margin="10,10,10,-100"  VerticalAlignment="Center" Click="BAutorisation_Click"/>
         <Button x:Name="BPaly" Content="Играть" HorizontalAlignment="Center" Height="50"  Margin="-190,100,0,0" VerticalAlignment="Top" Width="178" Click="BPaly_Click"/>

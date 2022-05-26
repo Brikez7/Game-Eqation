@@ -13,7 +13,7 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}" Height="578" Width="954" Closed="Window_Closed">
+        FontFamily="{DynamicResource MaterialDesignFont}" Height="578" Width="954" Closed="Window_Closed" WindowStartupLocation="CenterScreen">
     <Grid Background="White">
         <Button Content="Регистрация" HorizontalAlignment="Center" Height="75" Margin="0,422,0,0" VerticalAlignment="Top" Width="452"/>
         <TextBox HorizontalAlignment="Center" Height="55" Margin="0,339,0,0" TextWrapping="Wrap" TextAlignment="Center" FontSize="25" VerticalAlignment="Top" Width="452"/>

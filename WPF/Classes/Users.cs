@@ -1,9 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
+
 
 namespace WPF.Classes
 {
@@ -13,13 +9,13 @@ namespace WPF.Classes
         {
             using (Database db = new Database())
             {
-                User newUser = new User { NameUser = "Tom", Password = password };
-                // Добавление
+                User newUser = new User { NameUser = name, Password = password };
+
                 db.Users.Add(newUser);
                 db.SaveChanges();
             }
         }
-        public static bool Search(string name, string password)
+        public static bool SearchUser(string name, string password)
         {
             using (Database db = new Database())
             {
@@ -45,7 +41,7 @@ namespace WPF.Classes
         {
             using (Database db = new Database())
             {
-                User? user = db.Users.FirstOrDefault();
+                User? user = db.Users.FirstOrDefault(x => x.NameUser == name);
                 if (user != null)
                 {
                     user.Password = newPassword;

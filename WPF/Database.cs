@@ -16,7 +16,7 @@ namespace WPF
         {
         }
 
-        public virtual DbSet<TableRecorde> TableRecordes { get; set; } = null!;
+        public virtual DbSet<Record> Recordes { get; set; } = null!;
         public virtual DbSet<User> Users { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -30,7 +30,7 @@ namespace WPF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<TableRecorde>(entity =>
+            modelBuilder.Entity<Record>(entity =>
             {
                 entity.HasKey(e => e.NameUser)
                     .HasName("PK__TableRec__13F1851684C1D1B7");

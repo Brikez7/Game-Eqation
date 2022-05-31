@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Input;
 
 namespace WPF
 {
@@ -30,7 +31,12 @@ namespace WPF
             WindowMethods.InManeShowOtherForm(this, typeof(PRegistration));
         }
 
-        private void Window_Closed(object sender, EventArgs e)
+        private void Menu_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            WindowMethods.Exit();
+        }
+
+        private void Menu_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             WindowMethods.Exit();
         }

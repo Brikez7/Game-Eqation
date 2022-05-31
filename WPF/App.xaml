@@ -7,8 +7,17 @@
 
     <Application.Resources>
         <ResourceDictionary>
+            <Style x:Key="Mystayle1" TargetType="{x:Type Window}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Window}">
+                            <ContentPresenter/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
             <ResourceDictionary.MergedDictionaries>
-                <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="Orange" SecondaryColor="Yellow" />
+                <materialDesign:BundledTheme BaseTheme="Inherit" PrimaryColor="Orange" SecondaryColor="Blue" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

@@ -25,14 +25,18 @@ namespace WPF
             InitializeComponent();
         }
 
-        private void BBack_Click(object sender, RoutedEventArgs e)
+        private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-            WindowMethods.ShowMain(this);
+            if (Key.Escape == e.Key)
+            {
+                WindowMethods.CheckExit = false;
+                WindowMethods.ShowMain(this);
+            }
         }
 
-        private void Window_Closed(object sender, EventArgs e)
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            WindowMethods.Exit();
+            if (WindowMethods.CheckExit) WindowMethods.Exit();
         }
     }
 }

@@ -13,16 +13,15 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}" Height="576" Width="1051" Closed="Window_Closed" WindowStartupLocation="CenterScreen">
+        FontFamily="{DynamicResource MaterialDesignFont}" Height="576" Width="1051" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown" Closing="Window_Closing">
 
     <Grid Background="White">
         <Button Content="Авторизация" HorizontalAlignment="Center" Height="75" Margin="0,418,0,0" VerticalAlignment="Top" Width="452"/>
-        <TextBox HorizontalAlignment="Center" Height="55" Margin="0,339,0,0" TextWrapping="Wrap" TextAlignment="Center" FontSize="25" VerticalAlignment="Top" Width="452"/>
+        <TextBox HorizontalAlignment="Center" Height="36" Margin="0,358,0,0" TextWrapping="Wrap" TextAlignment="Center" FontSize="25" VerticalAlignment="Top" Width="452"/>
         <TextBox HorizontalAlignment="Center" Height="55" Margin="0,223,0,0" TextWrapping="Wrap" TextAlignment="Center" FontSize="25" VerticalAlignment="Top" Width="452"/>
         <Label x:Name="LRegistration" Content="Авторизация" HorizontalAlignment="Center" Margin="0,60,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Gill Sans Ultra Bold Condensed"/>
         <Label x:Name="LName" Content="Имя" HorizontalAlignment="Center" Margin="0,154,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="MV Boli" RenderTransformOrigin="0.635,-0.243" FontStretch="ExtraExpanded" FontStyle="Normal" FontWeight="Regular"/>
         <Label x:Name="LName_Copy" Content="Пароль" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="MV Boli" FontStretch="ExtraExpanded" FontStyle="Normal" FontWeight="Regular"/>
-        <Button x:Name="BBack" Content="Назад" HorizontalAlignment="Left" Height="28" Margin="16,15,0,0" VerticalAlignment="Top" Width="80" BorderBrush="White" Background="White" Click="BBack_Click"/>
 
     </Grid>
 </Window>

@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace WPF
 {
-    public partial class Database123 : DbContext
+    public partial class Database : DbContext
     {
-        public Database123()
+        public Database()
         {
         }
 
-        public Database123(DbContextOptions<Database123> options)
+        public Database(DbContextOptions<Database> options)
             : base(options)
         {
         }

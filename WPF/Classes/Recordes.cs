@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace WPF.Classes
 {
-    internal static class Recordes
+    internal class Recordes
     {
+        ApplicationContext a 
     }
 }

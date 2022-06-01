@@ -16,9 +16,10 @@
         Title="Главное меню" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" KeyDown="Menu_KeyDown" Closing="Menu_Closing">
 
     <Grid VerticalAlignment="Center" Height="427">
-        <Button x:Name="BAutorisation" Content="вход" HorizontalAlignment="Center" Height="60" Width="370" Margin="10,10,10,-100"  VerticalAlignment="Center" Click="BAutorisation_Click"/>
-        <Button x:Name="BPaly" Content="Играть" HorizontalAlignment="Center" Height="50"  Margin="-190,100,0,0" VerticalAlignment="Top" Width="178" Click="BPaly_Click"/>
-        <Button x:Name="BRecordes" Content="Рекорды" HorizontalAlignment="Center" Height="50"  Margin="190,100,0,0" VerticalAlignment="Top" Width="178" Click="BRecordes_Click"/>
-        <Button x:Name="BRegistration" Content="Регистрация" HorizontalAlignment="Center" Height="60" Width="370" Margin="0,165,0,0"  VerticalAlignment="Top" Click="BRegistration_Click_1"/>
+        <Button x:Name="BAutorisation" Content="Autorisation" HorizontalAlignment="Center" Height="60" Width="370" Margin="10,10,10,-100"  VerticalAlignment="Center" Click="BAutorisation_Click"/>
+        <Button x:Name="BPaly" Content="Play" HorizontalAlignment="Center" Height="50"  Margin="-190,100,0,0" VerticalAlignment="Top" Width="178" Click="BPaly_Click"/>
+        <Button x:Name="BRecordes" Content="Table recordes" HorizontalAlignment="Center" Height="50"  Margin="190,100,0,0" VerticalAlignment="Top" Width="178" Click="BRecordes_Click"/>
+        <Button x:Name="BRegistration" Content="Registration" HorizontalAlignment="Center" Height="60" Width="370" Margin="0,165,0,0"  VerticalAlignment="Top" Click="BRegistration_Click_1"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,50,0,0" TextWrapping="Wrap" Text="Main menu" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" FontStyle="Normal" TextDecorations="{x:Null}" Foreground="#FFA4A4A4"/>
     </Grid>
 </Window>

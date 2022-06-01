@@ -1,16 +1,15 @@
 ﻿using System.Linq;
 
-
 namespace WPF.Classes
 {
-    internal class Recordes
+    internal class TRecordes
     {
         public static void Add(string name, int time)
         {
             using (Database db = new Database())
             {
                 Record newRecord = new Record { NameUser = name, Level = time };
-                // Добавление
+
                 db.Recordes.Add(newRecord);
                 db.SaveChanges();
             }

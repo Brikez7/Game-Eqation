@@ -1,8 +1,6 @@
-﻿using System;
-using System.Data;
-using System.Data.SqlClient;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Input;
+using WPF.Classes;
 
 namespace WPF
 {
@@ -12,24 +10,45 @@ namespace WPF
         {
             InitializeComponent();
         }
-        private void equalPasswords() 
+
+        private void EqualPasswords() 
         {
-            if (BPassword.Text != BReplPassword.Text)
+            if (FPassword.Text != FReplPassword.Text)
             {
-                BPassword.Clear();
-                BReplPassword.Clear();
-                MessageBox.Show("Пароли не совпадают");
+                FPassword.Clear();
+                FReplPassword.Clear();
+                MessageBox.Show("Password not equal");
                 return;
             }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            equalPasswords();
+            EqualPasswords();
 
+            string nameUser = FName.Text;
+            string password = FPassword.Text;
+            if (!TUsers.SearchUser(nameUser))
+            {
+                TUsers.Add(nameUser, password);
+                ClearFeild();
+                MessageBox.Show("Registration completed successfully");
+            }
+            else 
+            { 
+                MessageBox.Show("Accaunt with name is exists");
+                FName.Clear();
+            }
         }
 
-        private void Window_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        private void ClearFeild() 
+        {
+            FName.Clear();
+            FPassword.Clear();
+            FReplPassword.Clear();
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             if (Key.Escape == e.Key)
             {

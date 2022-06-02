@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF.Classes;
 
 namespace WPF
 {
@@ -23,6 +24,7 @@ namespace WPF
         public PRecordes()
         {
             InitializeComponent();
+            DataGridRecordes.ItemsSource = TRecordes.GetTable();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -42,11 +44,6 @@ namespace WPF
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (WindowMethods.CheckExit) WindowMethods.Exit();
-        }
-
-        private void WTableRecord_Loaded(object sender, RoutedEventArgs e)
-        {
-            
         }
     }
 }

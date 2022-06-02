@@ -29,5 +29,14 @@ namespace WPF
         {
             if (WindowMethods.CheckExit) WindowMethods.Exit();
         }
+
+        private void WPlay_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (Key.Escape == e.Key)
+            {
+                WindowMethods.CheckExit = false;
+                WindowMethods.ShowMain(this);
+            }
+        }
     }
 }

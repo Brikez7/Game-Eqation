@@ -6,6 +6,6 @@ namespace WPF
     public partial class Record
     {
         public string NameUser { get; set; } = null!;
-        public int? Level { get; set; }
+        public int? Round { get; set; }
     }
 }

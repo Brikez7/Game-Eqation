@@ -10,7 +10,6 @@ namespace WPF
     internal class WindowMethods
     {
         public static bool CheckExit = false;
-
         public static void ShowMain(Window This)
         {
             MainWindow maneform = new MainWindow();

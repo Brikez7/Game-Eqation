@@ -19,6 +19,11 @@ namespace WPF
                 WindowMethods.ShowMain(this);
             }
         }
+        private void ClearFeilds() 
+        {
+            FName.Clear();
+            FPassword.Clear();
+        }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -29,15 +34,17 @@ namespace WPF
         {
             string name = FName.Text;
             string password = FPassword.Text;
-
+            if(name != "" && password != "" )
             if (TUsers.CheckPassword(name, password))
             {
-                ActiveUser.GetNewUser(name);
+                ActiveUser.SetNewUser(name);
                 MessageBox.Show("Autorisation completed successfully");
+                ClearFeilds();
             }
             else 
             {
-                MessageBox.Show("User with name not found");
+                MessageBox.Show("Autorisation faild\nWorng name or password");
+                ClearFeilds();
                 ActiveUser.Disactive();
             }
         }

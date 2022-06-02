@@ -5,6 +5,11 @@ namespace WPF.Classes
 {
     internal static class TUsers
     {
+        static TUsers()
+        {
+     
+        }
+
         public static void Add(string name, string password) 
         {
             using (Database db = new Database())

@@ -13,13 +13,13 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}" Height="459" Width="1234" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown" Closing="Window_Closing" Loaded="WTableRecord_Loaded">
+        FontFamily="{DynamicResource MaterialDesignFont}" Height="459" Width="1234" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown" Closing="Window_Closing">
     <Grid x:Name="WRecordes">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="819*"/>
             <ColumnDefinition Width="415*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid HorizontalAlignment="Left" Height="382" VerticalAlignment="Top" Width="894" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="18,46,0,0" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="DataGridRecordes" HorizontalAlignment="Left" Height="382" VerticalAlignment="Top" Width="894" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="18,46,0,0" Grid.ColumnSpan="2"/>
         <Button Grid.Column="1" Content="Поиск" HorizontalAlignment="Left" Height="46" Margin="124,214,0,0" VerticalAlignment="Top" Width="238"/>
         <Button Grid.Column="1" Content="Сортировка" HorizontalAlignment="Left" Height="46" Margin="124,50,0,0" VerticalAlignment="Top" Width="238" Click="Button_Click"/>
         <TextBox x:Name="BName" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="124,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238" FontSize="14"/>

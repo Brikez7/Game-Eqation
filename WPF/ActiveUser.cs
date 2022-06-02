@@ -12,7 +12,9 @@ namespace WPF
 
         private static ActiveUser? _activeUser;
 
-        public static void GetNewUser(string name) => _activeUser = new ActiveUser(name);
+        public static void SetNewUser(string name) => _activeUser = new ActiveUser(name);
+
+        public static string? GetName() => _activeUser?.Name;
 
         public static void Disactive() => _activeUser = null;
 

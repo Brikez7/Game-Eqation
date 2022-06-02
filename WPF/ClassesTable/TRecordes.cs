@@ -7,7 +7,7 @@ namespace WPF.Classes
     {
         static TRecordes() 
         {
-            Database.UpdateDB();
+
         }
 
         public static void Add(string name, int time)

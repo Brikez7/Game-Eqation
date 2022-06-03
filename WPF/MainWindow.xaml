@@ -13,13 +13,13 @@
         TextOptions.TextRenderingMode="Auto"   
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}" Width="893" Height="431" Foreground="Red"
-        Title="Главное меню" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" KeyDown="Menu_KeyDown" Closing="Menu_Closing">
+        Title="Главное меню" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" KeyDown="Menu_KeyDown" Closing="Menu_Closing" Icon="/premium-icon-puzzle-4662251.png">
 
     <Grid VerticalAlignment="Center" Height="427">
-        <Button x:Name="BAutorisation" Content="Autorisation" HorizontalAlignment="Center" Height="60" Width="370" Margin="10,10,10,-100"  VerticalAlignment="Center" Click="BAutorisation_Click"/>
-        <Button x:Name="BPaly" Content="Play" HorizontalAlignment="Center" Height="50"  Margin="-190,100,0,0" VerticalAlignment="Top" Width="178" Click="BPaly_Click"/>
-        <Button x:Name="BRecordes" Content="Table recordes" HorizontalAlignment="Center" Height="50"  Margin="190,100,0,0" VerticalAlignment="Top" Width="178" Click="BRecordes_Click"/>
-        <Button x:Name="BRegistration" Content="Registration" HorizontalAlignment="Center" Height="60" Width="370" Margin="0,165,0,0"  VerticalAlignment="Top" Click="BRegistration_Click_1"/>
+        <Button x:Name="BAutorisation" Content="Autorisation" HorizontalAlignment="Center" Height="60" Width="370" Margin="0,240,0,0"  VerticalAlignment="Top" Click="BAutorisation_Click"/>
+        <Button x:Name="BPaly" Content="Play" HorizontalAlignment="Center" Height="60"  Margin="-190,100,0,0" VerticalAlignment="Top" Width="180" Click="BPaly_Click"/>
+        <Button x:Name="BRecordes" Content="Table recordes" HorizontalAlignment="Center" Height="60"  Margin="190,100,0,0" VerticalAlignment="Top" Width="180" Click="BRecordes_Click"/>
+        <Button x:Name="BRegistration" Content="Registration" HorizontalAlignment="Center" Height="60" Width="370" Margin="0,170,0,0"  VerticalAlignment="Top" Click="BRegistration_Click_1"/>
         <Label x:Name="LMainMenu" Content="Main menu" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Gill Sans Ultra Bold Condensed"/>
     </Grid>
 </Window>

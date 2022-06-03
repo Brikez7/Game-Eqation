@@ -13,7 +13,7 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}" Height="576" Width="1051" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown" Closing="Window_Closing">
+        FontFamily="{DynamicResource MaterialDesignFont}" Height="576" Width="1051" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown" Closing="Window_Closing" Icon="/premium-icon-puzzle-4662251.png">
 
     <Grid x:Name="Grid" Background="White">
         <Button x:Name="BAutorisation" Content="Autorisation" HorizontalAlignment="Center" Height="75" Margin="0,418,0,0" VerticalAlignment="Top" Width="452" Click="Button_Click"/>

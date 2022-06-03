@@ -14,7 +14,7 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}" WindowStartupLocation="CenterScreen" Closing="Window_Closing" KeyDown="WPlay_KeyDown">
+        FontFamily="{DynamicResource MaterialDesignFont}" WindowStartupLocation="CenterScreen" Closing="Window_Closing" KeyDown="WPlay_KeyDown" Icon="/premium-icon-puzzle-4662251.png">
 
     <Grid>
         

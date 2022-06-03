@@ -19,7 +19,7 @@ namespace WPF.Classes
     { 
         public static void Add(string name, int time)
         {
-            using (Database db = new Database())
+            using (Database.Database db = new Database.Database())
             {
                 Record newRecord = new Record { NameUser = name, Round = time };
 
@@ -30,7 +30,7 @@ namespace WPF.Classes
 
         public static List<Record> GetTable() 
         {
-            using (Database db = new Database())
+            using (Database.Database db = new Database.Database())
             {
                 List<Record> tableRecordes =  db.Recordes.ToList();
                 return tableRecordes;
@@ -39,7 +39,7 @@ namespace WPF.Classes
 
         public static bool Search(string name)
         {
-            using (Database db = new Database())
+            using (Database.Database db = new Database.Database())
             {
                 var record = db.Recordes.ToList();
 
@@ -49,7 +49,7 @@ namespace WPF.Classes
 
         public static bool Search(string name, out Record? userRecord)
         {
-            using (Database db = new Database())
+            using (Database.Database db = new Database.Database())
             {
                 var record = db.Recordes.ToList();
                 userRecord = record.Find(x => x.NameUser == name);
@@ -59,7 +59,7 @@ namespace WPF.Classes
 
         public static void Delete(string name)
         {
-            using (Database db = new Database())
+            using (Database.Database db = new Database.Database())
             {
                 Record? record = db.Recordes.FirstOrDefault(x => x.NameUser == name);
                 if (record != null)
@@ -73,7 +73,7 @@ namespace WPF.Classes
 
         public static void Change(string name, int level)
         {
-            using (Database db = new Database())
+            using (Database.Database db = new Database.Database())
             {
                 Record? record = db.Recordes.FirstOrDefault(x => x.NameUser == name);
                 if (record != null)
@@ -86,7 +86,7 @@ namespace WPF.Classes
 
         public static List<Record> Sort()
         {
-            using (Database db = new Database())
+            using (Database.Database db = new Database.Database())
             {
                 var users = db.Recordes.ToList();
 

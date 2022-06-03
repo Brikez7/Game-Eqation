@@ -8,7 +8,7 @@ namespace WPF.Classes
     {
         public static void Add(string name, string password) 
         {
-            using (Database db = new Database())
+            using (Database.Database db = new Database.Database())
             {
                 User newUser = new User { NameUser = name, Password = password };
 
@@ -19,7 +19,7 @@ namespace WPF.Classes
 
         public static bool CheckPassword(string name, string password)
         {
-            using (Database db = new Database())
+            using (Database.Database db = new Database.Database())
             {
                 var users = db.Users.ToList();
 
@@ -29,7 +29,7 @@ namespace WPF.Classes
 
         public static bool SearchUser(string name)
         {
-            using (Database db = new Database())
+            using (Database.Database db = new Database.Database())
             {
                 var users = db.Users.ToList();
 
@@ -39,7 +39,7 @@ namespace WPF.Classes
 
         public static void Delete(string name)
         {
-            using (Database db = new Database())
+            using (Database.Database db = new Database.Database())
             {
                 User? user = db.Users.FirstOrDefault(x => x.NameUser == name);
                 if (user != null)
@@ -52,7 +52,7 @@ namespace WPF.Classes
 
         public static void Change(string name, string newPassword)
         {
-            using (Database db = new Database())
+            using (Database.Database db = new Database.Database())
             {
                 User? user = db.Users.FirstOrDefault(x => x.NameUser == name);
                 if (user != null)

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WPF
+namespace WPF.Database
 {
     public partial class User
     {

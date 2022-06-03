@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WPF
+namespace WPF.Database
 {
     [Table("TableRecordes")]
     public partial class Record

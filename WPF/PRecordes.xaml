@@ -14,15 +14,16 @@
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}" Height="459" Width="1234" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown" Closing="Window_Closing">
-    <Grid x:Name="WRecordes">
+    <Grid x:Name="WRecordes" Margin="-6,2,6,-2">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="819*"/>
-            <ColumnDefinition Width="415*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="DataGridRecordes" HorizontalAlignment="Left" Height="382" VerticalAlignment="Top" Width="894" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="18,46,0,0" Grid.ColumnSpan="2"/>
-        <Button Grid.Column="1" Content="Поиск" HorizontalAlignment="Left" Height="46" Margin="124,214,0,0" VerticalAlignment="Top" Width="238"/>
-        <Button Grid.Column="1" Content="Сортировка" HorizontalAlignment="Left" Height="46" Margin="124,50,0,0" VerticalAlignment="Top" Width="238" Click="Button_Click"/>
-        <TextBox x:Name="BName" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="124,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238" FontSize="14"/>
+        <DataGrid x:Name="DataGridRecordes" HorizontalAlignment="Left" Height="353" VerticalAlignment="Top" Width="894" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="18,75,0,0"/>
+        <Button x:Name="BSearch" Content="Search" HorizontalAlignment="Left" Height="46" Margin="969,271,0,0" VerticalAlignment="Top" Width="238" Click="BSearch_Click"/>
+        <Button x:Name="BSort" Content="Sort" HorizontalAlignment="Left" Height="46" Margin="969,107,0,0" VerticalAlignment="Top" Width="238" Click="Button_Click"/>
+        <TextBox x:Name="FName" HorizontalAlignment="Left" Height="37" Margin="969,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238" FontSize="14"/>
+        <Button x:Name="BUpdate" Content="Update" HorizontalAlignment="Left" Height="46" Margin="969,341,0,0" VerticalAlignment="Top" Width="238" Click="BUpdate_Click"/>
+        <Label x:Name="LMainMenu" Content="Table recordes" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Gill Sans Ultra Bold Condensed"/>
 
     </Grid>
 </Window>

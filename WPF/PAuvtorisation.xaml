@@ -19,7 +19,7 @@
         <Button x:Name="BAutorisation" Content="Autorisation" HorizontalAlignment="Center" Height="75" Margin="0,418,0,0" VerticalAlignment="Top" Width="452" Click="Button_Click"/>
         <TextBox x:Name="FPassword" HorizontalAlignment="Center" Height="36" Margin="0,358,0,0" TextWrapping="Wrap" TextAlignment="Center" FontSize="25" VerticalAlignment="Top" Width="452" MaxLength="30" MaxLines="2"/>
         <TextBox x:Name="FName" HorizontalAlignment="Center" Height="55" Margin="0,223,0,0" TextWrapping="Wrap" TextAlignment="Center" FontSize="25" VerticalAlignment="Top" Width="452" MaxLength="20" MaxLines="2"/>
-        <Label x:Name="LRegistration" Content="Autorisation page" HorizontalAlignment="Center" Margin="0,60,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Gill Sans Ultra Bold Condensed"/>
+        <Label x:Name="LRegistration" Content="Autorisation" HorizontalAlignment="Center" Margin="0,60,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Gill Sans Ultra Bold Condensed"/>
         <Label x:Name="LName" Content="Name" HorizontalAlignment="Center" Margin="0,154,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="MV Boli" RenderTransformOrigin="0.635,-0.243" FontStretch="ExtraExpanded" FontStyle="Normal" FontWeight="Regular"/>
         <Label x:Name="LPassword" Content="Password" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="MV Boli" FontStretch="ExtraExpanded" FontStyle="Normal" FontWeight="Regular"/>
     </Grid>

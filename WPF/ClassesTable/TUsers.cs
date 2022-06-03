@@ -1,15 +1,10 @@
-﻿using System.Linq;
-
+﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace WPF.Classes
 {
     internal static class TUsers
     {
-        static TUsers()
-        {
-     
-        }
-
         public static void Add(string name, string password) 
         {
             using (Database db = new Database())
@@ -20,6 +15,7 @@ namespace WPF.Classes
                 db.SaveChanges();
             }
         }
+
         public static bool CheckPassword(string name, string password)
         {
             using (Database db = new Database())
@@ -29,6 +25,7 @@ namespace WPF.Classes
                 return users.Any(x => x.NameUser == name && x.Password == password);
             }
         }
+
         public static bool SearchUser(string name)
         {
             using (Database db = new Database())
@@ -49,9 +46,9 @@ namespace WPF.Classes
                     db.Users.Remove(user);
                     db.SaveChanges();
                 }
-
             }
         }
+
         public static void Change(string name, string newPassword)
         {
             using (Database db = new Database())

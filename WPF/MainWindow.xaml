@@ -20,6 +20,6 @@
         <Button x:Name="BPaly" Content="Play" HorizontalAlignment="Center" Height="50"  Margin="-190,100,0,0" VerticalAlignment="Top" Width="178" Click="BPaly_Click"/>
         <Button x:Name="BRecordes" Content="Table recordes" HorizontalAlignment="Center" Height="50"  Margin="190,100,0,0" VerticalAlignment="Top" Width="178" Click="BRecordes_Click"/>
         <Button x:Name="BRegistration" Content="Registration" HorizontalAlignment="Center" Height="60" Width="370" Margin="0,165,0,0"  VerticalAlignment="Top" Click="BRegistration_Click_1"/>
-        <Label x:Name="LRegistration" Content="Main menu" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Gill Sans Ultra Bold Condensed"/>
+        <Label x:Name="LMainMenu" Content="Main menu" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Gill Sans Ultra Bold Condensed"/>
     </Grid>
 </Window>

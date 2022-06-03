@@ -29,7 +29,7 @@ namespace WPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            DataGridRecordes.ItemsSource = TRecordes.Sort();
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
@@ -44,6 +44,25 @@ namespace WPF
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (WindowMethods.CheckExit) WindowMethods.Exit();
+        }
+
+        private void BUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            DataGridRecordes.ItemsSource = TRecordes.GetTable();
+        }
+
+        private void BSearch_Click(object sender, RoutedEventArgs e)
+        {
+            Record? record = new Record();
+            if (TRecordes.Search(FName.Text,out record)) 
+            {
+                DataGridRecordes.ItemsSource = new List<Record?>() { record };
+                MessageBox.Show("Пользователь найден");
+            }
+            else 
+            {
+                MessageBox.Show("Пользователь не найден");
+            }
         }
     }
 }

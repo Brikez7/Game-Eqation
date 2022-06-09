@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="premium-icon-puzzle-4662251.png" />
+    <None Remove="premium-icon-game-control-4315508.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="premium-icon-puzzle-4662251.png" />
+    <Resource Include="premium-icon-game-control-4315508.png" />
   </ItemGroup>
 
 </Project>

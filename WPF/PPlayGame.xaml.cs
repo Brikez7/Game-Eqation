@@ -1,28 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MahApps.Metro.Controls;
+using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WPF
 {
     /// <summary>
     /// Interaction logic for PPlayGame.xaml
     /// </summary>
-    public partial class PPlayGame : Window
+    public partial class PPlayGame : MetroWindow
     {
         public PPlayGame()
         {
             InitializeComponent();
+            ButtonEquation.GetEvent(UpdateLabels);
+        }
+
+        public void UpdateLabels() 
+        {
+            LEnemy.Content = "Enemy:" + ButtonEquation.GetEnemy();
+            LRound.Content = "Round:" + ButtonEquation.GetRound();
+            LScore.Content = "Score:" + ButtonEquation.GetScore();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -37,6 +35,12 @@ namespace WPF
                 WindowMethods.CheckExit = false;
                 WindowMethods.ShowMain(this);
             }
+        }
+
+        private void WPlay_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            ButtonEquation.Update();
+            UpdateLabels();
         }
     }
 }

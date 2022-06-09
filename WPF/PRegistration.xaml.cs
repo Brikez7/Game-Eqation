@@ -1,10 +1,11 @@
-﻿using System.Windows;
+﻿using MahApps.Metro.Controls;
+using System.Windows;
 using System.Windows.Input;
 using WPF.Classes;
 
 namespace WPF
 {
-    public partial class PRegistration : Window
+    public partial class PRegistration : MetroWindow
     {
         public PRegistration()
         {
@@ -22,10 +23,19 @@ namespace WPF
             }
         }
 
+
+        private void CheckVoidFields()
+        {
+            if (FPassword.Text == "" || FName.Text == "" || FReplPassword.Text == "")
+            {
+                MessageBox.Show("Feilds is void");
+                return;
+            }
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             EqualPasswords();
-
+            CheckVoidFields();
             string nameUser = FName.Text;
             string password = FPassword.Text;
             if (!TUsers.SearchUser(nameUser))

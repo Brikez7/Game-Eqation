@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MahApps.Metro.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace WPF
     /// <summary>
     /// Interaction logic for PRecordes.xaml
     /// </summary>
-    public partial class PRecordes : Window
+    public partial class PRecordes : MetroWindow
     {
         public PRecordes()
         {
@@ -51,18 +52,28 @@ namespace WPF
         {
             DataGridRecordes.ItemsSource = TRecordes.GetTable();
         }
-
+        private void CheckFeild() 
+        {
+            if (FName.Text == "") 
+            {
+                MessageBox.Show("Field is void");
+                return;
+                double a = 0.45;
+                float b = 0.5635f;
+            }
+        }
         private void BSearch_Click(object sender, RoutedEventArgs e)
         {
+            CheckFeild();
             Record? record = new Record();
             if (TRecordes.Search(FName.Text,out record)) 
             {
                 DataGridRecordes.ItemsSource = new List<Record?>() { record };
-                MessageBox.Show("Пользователь найден");
+                MessageBox.Show("User found");
             }
             else 
             {
-                MessageBox.Show("Пользователь не найден");
+                MessageBox.Show("User not found");
             }
         }
     }

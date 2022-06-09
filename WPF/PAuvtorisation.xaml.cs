@@ -1,10 +1,11 @@
-﻿using System.Windows;
+﻿using MahApps.Metro.Controls;
+using System.Windows;
 using System.Windows.Input;
 using WPF.Classes;
 
 namespace WPF
 {
-    public partial class PAuvtorisation : Window
+    public partial class PAuvtorisation : MetroWindow
     {
         public PAuvtorisation()
         {
@@ -29,7 +30,14 @@ namespace WPF
         {
             if (WindowMethods.CheckExit) WindowMethods.Exit();
         }
-
+        private void CheckFilds() 
+        {
+            if (FName.Text == "" || FPassword.Text == "") 
+            {
+                MessageBox.Show("Feilds is void");
+                return;
+            }
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string name = FName.Text;

@@ -57,6 +57,16 @@ namespace WPF.Classes
             }
         }
 
+        public static Record? Find(string name)
+        {
+            using (Database.Database db = new Database.Database())
+            {
+                var record = db.Recordes.ToList();
+                var userRecord = record.Find(x => x.NameUser == name);
+                return userRecord;
+            }
+        }
+
         public static void Delete(string name)
         {
             using (Database.Database db = new Database.Database())

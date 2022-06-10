@@ -52,21 +52,22 @@ namespace WPF
         {
             DataGridRecordes.ItemsSource = TRecordes.GetTable();
         }
-        private void CheckFeild() 
+        private bool CheckFeildIsVoid(string enterName) 
         {
-            if (FName.Text == "") 
+            if (enterName == "") 
             {
                 MessageBox.Show("Field is void");
-                return;
-                double a = 0.45;
-                float b = 0.5635f;
             }
+            return enterName == "";
         }
         private void BSearch_Click(object sender, RoutedEventArgs e)
         {
-            CheckFeild();
+            string enterName = FName.Text;
+            if (CheckFeildIsVoid(enterName))
+                return;
+
             Record? record = new Record();
-            if (TRecordes.Search(FName.Text,out record)) 
+            if (TRecordes.Search(enterName, out record)) 
             {
                 DataGridRecordes.ItemsSource = new List<Record?>() { record };
                 MessageBox.Show("User found");

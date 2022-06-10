@@ -13,31 +13,32 @@ namespace WPF
     public partial class ButtonEquation : UserControl
     {
         private Equation _equation;
-        private static Game game = new Game(100,10);
+        private static Game game;
         private static List<ButtonEquation> _buttonEquations = new();
         private delegate void EventHandlerClick();
-        private static event EventHandlerClick? EventHadlerButton;
+        private static event EventHandlerClick? UpdateInfoOnLabel;
         private static bool IsClick = true;
 
-        public static void Update() 
+        public static void Update(double score = 100,double enemy = 10) 
         {
-            game = new Game(100,10);
+            game = new Game(score, enemy);
             UpdateAllButtonEquation();
-            EventHadlerButton?.Invoke();
+            UpdateInfoOnLabel?.Invoke();
             IsClick = true;
         }
 
         public static void GetEvent(Action action) 
         {
-            EventHadlerButton += () => action();
+            UpdateInfoOnLabel += () => action();
         }
 
-        public ButtonEquation()
+        public ButtonEquation(double score = 100,double enemy = 10)
         {
             InitializeComponent();
             _equation = new Equation();
             GameButton.Content = _equation.GetEqution();
             _buttonEquations.Add(this);
+            game = new Game(score, enemy);
         }
 
         private static void UpdateAllButtonEquation() 
@@ -94,11 +95,11 @@ namespace WPF
                 {
                     Block();
                     CheckRecord();
-                    EventHadlerButton?.Invoke();
+                    UpdateInfoOnLabel?.Invoke();
                     IsClick = false;
                     return;
                 }
-                EventHadlerButton?.Invoke();
+                UpdateInfoOnLabel?.Invoke();
                 UpdateAllButtonEquation();
             }
         }

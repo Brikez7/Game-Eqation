@@ -12,32 +12,38 @@ namespace WPF
             InitializeComponent();
         }
 
-        private void EqualPasswords() 
+        private bool EqualPasswords(string password,string repeatPassowrd) 
         {
-            if (FPassword.Text != FReplPassword.Text)
+            if (password != repeatPassowrd)
             {
                 FPassword.Clear();
                 FReplPassword.Clear();
                 MessageBox.Show("Password not equal");
-                return;
             }
+            return password == repeatPassowrd;
         }
 
 
-        private void CheckVoidFields()
+        private bool CheckVoidFields(string nameUser,string password,string repitPassword)
         {
-            if (FPassword.Text == "" || FName.Text == "" || FReplPassword.Text == "")
+            if (nameUser == "" || password == "" || repitPassword == "")
             {
                 MessageBox.Show("Feilds is void");
-                return;
             }
+            return nameUser == "" || password == "" || repitPassword == "";
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            EqualPasswords();
-            CheckVoidFields();
             string nameUser = FName.Text;
             string password = FPassword.Text;
+            string repeatPassword = FReplPassword.Text;
+
+            if(!EqualPasswords(password, repeatPassword))
+                return;
+
+            if(CheckVoidFields(nameUser, password, repeatPassword))
+                return;
+           
             if (!TUsers.SearchUser(nameUser))
             {
                 TUsers.Add(nameUser, password);

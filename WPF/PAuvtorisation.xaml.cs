@@ -30,21 +30,20 @@ namespace WPF
         {
             if (WindowMethods.CheckExit) WindowMethods.Exit();
         }
-        private bool CheckFilds(string name, string password) 
-        {
-            if (name == "" || password == "") 
-            {
-                MessageBox.Show("Feilds is void");
-            }
-            return name == "" || password == "";
-        }
+
+        private static bool CheckFilds(string name, string password) 
+            => name == "" || password == "";
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string name = FName.Text;
             string password = FPassword.Text;
 
-            if (CheckFilds(name,password))
+            if (CheckFilds(name, password))
+            {
+                MessageBox.Show("Feilds is void");
                 return;
+            }
 
             if (TUsers.CheckPassword(name, password))
             {

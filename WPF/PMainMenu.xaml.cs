@@ -20,7 +20,7 @@ namespace WPF
             WindowMethods.InManeShowOtherForm(this, typeof(PAuvtorisation));
         }
 
-        private void BPaly_Click(object sender, RoutedEventArgs e)
+        private void BPlay_Click(object sender, RoutedEventArgs e)
         {
             WindowMethods.InManeShowOtherForm(this, typeof(PPlayGame));
         }

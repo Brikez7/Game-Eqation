@@ -26,7 +26,7 @@
         </Grid.ColumnDefinitions>
         <DataGrid x:Name="DataGridRecordes" BorderThickness="3"  HorizontalAlignment="Left" Height="343" VerticalAlignment="Top" Width="613" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="98,75,0,0" Background="#FFE08A51" Foreground="#FF060000" BorderBrush="#FF060000" IsReadOnly="True"></DataGrid>
         <Button x:Name="BSearch" Content="Search" HorizontalAlignment="Left" Height="45" Margin="21,247,0,0" VerticalAlignment="Top" Width="240" Click="BSearch_Click" Grid.Column="1"/>
-        <Button x:Name="BSort" Content="Sort" HorizontalAlignment="Left" Height="45" Margin="21,80,0,0" VerticalAlignment="Top" Width="240" Click="Button_Click" Grid.Column="1"/>
+        <Button x:Name="BSort" Content="Sort" HorizontalAlignment="Left" Height="45" Margin="21,80,0,0" VerticalAlignment="Top" Width="240" Click="BSort_Click" Grid.Column="1"/>
         <TextBox x:Name="FName" FontSize="25" HorizontalAlignment="Left" MaxLength="20" Height="35" Margin="21,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" Grid.Column="1"/>
         <Button x:Name="BUpdate" Content="Update" HorizontalAlignment="Left" Height="45" Margin="21,317,0,0" VerticalAlignment="Top" Width="240" Click="BUpdate_Click" Grid.Column="1"/>
         <Label x:Name="LMainMenu" Content="Table recordes" HorizontalAlignment="Left" Margin="368,20,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Gill Sans Ultra Bold Condensed" Height="53" Width="338"/>

@@ -7,5 +7,5 @@
              Name="Why"
              mc:Ignorable="d" 
              d:DesignHeight="45" d:DesignWidth="350">
-    <Button x:Name="GameButton" Height="45" Width="350" Click="Button_Click"/>
+    <Button x:Name="GameButton" Height="45" Width="350" Click="Equation_Click"/>
 </UserControl>

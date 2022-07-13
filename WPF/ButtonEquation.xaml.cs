@@ -32,13 +32,22 @@ namespace WPF
             UpdateInfoOnLabel += () => action();
         }
 
+        static ButtonEquation() 
+        {
+            game = new Game(100, 10);
+        }
+
         public ButtonEquation()
         {
             InitializeComponent();
+            CreateEquation();
+        }
+
+        private void CreateEquation()
+        {
             _equation = new Equation();
             GameButton.Content = _equation.GetEqution();
             _buttonEquations.Add(this);
-            game = new Game(100, 10);
         }
 
         private static void UpdateAllButtonEquation() 
@@ -50,14 +59,20 @@ namespace WPF
             }
         }
 
-        public static int GetRound() => game.GetRound();
-        public static double GetEnemy() => game.GetEnemy();
-        public static double GetScore() => game.GetScore();
+        public static int GetRound()
+            => game.GetRound();
 
-        private void Block() => IsClick = false;
+        public static double GetEnemy() 
+            => game.GetEnemy();
+
+        public static double GetScore() 
+            => game.GetScore();
+
+        private static void BlockClick() 
+            => IsClick = false;
 
 
-        private void CheckRecord() 
+        private static void CheckRecord() 
         {
             int lastRound = game.GetRound();
             if (!ActiveUser.CheckActive())
@@ -66,7 +81,8 @@ namespace WPF
                 return;
             }
 
-            if (TRecordes.Search(ActiveUser.GetName()))
+            string? nameActiveUser = ActiveUser.GetName();
+            if (TRecordes.Search(nameActiveUser))
             {
                 if (ActiveUser.UpdateRecord(lastRound))
                 {
@@ -84,19 +100,18 @@ namespace WPF
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Equation_Click(object sender, RoutedEventArgs e)
         {
             if (IsClick)
             {
                 double unswer = _equation.GetUnswer();
-                game.NextRound(unswer);
+                game?.NextRound(unswer);
 
                 if (game.CheckLose())
                 {
-                    Block();
+                    BlockClick();
                     CheckRecord();
                     UpdateInfoOnLabel?.Invoke();
-                    IsClick = false;
                     return;
                 }
                 UpdateInfoOnLabel?.Invoke();

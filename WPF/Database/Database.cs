@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
+﻿using System.Configuration;
 using System.IO;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace WPF.Database
 {
@@ -28,7 +25,7 @@ namespace WPF.Database
                 string beginPathSqlDB = ConfigurationManager.ConnectionStrings["BeginPathConnection"].ConnectionString;
                 string endPathSqlDB = ConfigurationManager.ConnectionStrings["EndPathConnection"].ConnectionString;
                 string pathDirectory = Directory.GetCurrentDirectory();
-                //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                
                 optionsBuilder.UseSqlServer($"{beginPathSqlDB + pathDirectory + endPathSqlDB}");
             }
         }

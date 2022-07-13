@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Xml.XPath;
@@ -8,51 +7,43 @@ namespace WPF.Tasking
 {
     public class Equation
     {
-        private Random _random = new Random();
-        private string _equation;
-        private double _unswer;
-        public static double _coficent { get; private set; } = Game._coficent;
-        private static readonly char[] _chars = new char[5] { '+', '-', '/', '*','%' };
+        public static double Coficent { get; private set; }
+        private static readonly char[] _chars = new char[5] { '+', '-', '/', '*', '%' };
+        private readonly Random _random = new Random();
+        private readonly string _equation;
+        private readonly double _unswer;
 
-        public string GetEqution() => _equation;
+        public string GetEqution() 
+            => _equation;
 
-        public double GetUnswer() => _unswer;
+        public double GetUnswer() 
+            => _unswer;
 
         private char RandomOperation() 
-        {
-            return _chars[_random.Next(_chars.Length)];
-        }
+            => _chars[_random.Next(_chars.Length)];
+
 
         public Equation()
         {
+            Coficent = Game.Coficent;
             int countDigits = RandomCountDigit();
 
-            double value = Math.Round(_random.Next(10) * _coficent, 2);
+            double value = Math.Round(_random.Next(10) * Coficent, 2);
             _equation += value;
+
             for (int x = 0; x < countDigits; x++)
             {
                 double digit = Math.Round(RandomDigit(), 2);
 
-                switch (RandomOperation())
+                _equation += RandomOperation() switch
                 {
-                    case '+':
-                        _equation += $" + {digit}";
-                        break;
-                    case '-':
-                        _equation += $" - {digit}";
-                        break;
-                    case '/':
-                        _equation += $" * {digit}";
-                        break;
-                    case '*':
-                        _equation += $" / {digit}";
-                        break;
-                    case '%':
-                        _equation += $" % {digit}";
-                        break;
-                    default:
-                        throw new Exception("this operation not exit");
-                }
+                    '+' => $" + {digit}",
+                    '-' => $" - {digit}",
+                    '/' => $" * {digit}",
+                    '*' => $" / {digit}",
+                    '%' => $" % {digit}",
+                    _ => throw new Exception("this operation not exit"),
+                };
             }
             _unswer = Evaluate(_equation);
         }
@@ -64,24 +55,19 @@ namespace WPF.Tasking
                     new Regex(@"([\+\-\*])").Replace(expression, " ${1} ")
                                             .Replace("/", " div ")
                                             .Replace("%", " mod "));
-
-            // ReSharper disable PossibleNullReferenceException
             return (double)new XPathDocument
                 (new StringReader("<r/>"))
                     .CreateNavigator()
                     .Evaluate(xsltExpression);
-            // ReSharper restore PossibleNullReferenceException
         }
 
         private int RandomCountDigit()
-        {
-            return (_random.Next(1 + (int)(_coficent / 2), (int)(10 * _coficent)));
-        }
+            => (_random.Next(1 + (int)(Coficent / 2), (int)(10 * Coficent)));
 
         private double RandomDigit()
-        {
-            return Math.Round(_random.Next((int)(10 * _coficent)) + _random.NextDouble(),2);
-        }
+            => Math.Round(
+                _random.Next(1,(int)(10 * Coficent))
+                + _random.NextDouble(),2);
     }
 }
 

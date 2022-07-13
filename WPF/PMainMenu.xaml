@@ -21,7 +21,7 @@
     Title="Главное меню" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" KeyDown="Menu_KeyDown" Closing="Menu_Closing" Icon="/premium-icon-game-control-4315508.png" ResizeMode="NoResize">
     <Grid x:Name="GWMain" VerticalAlignment="Center" Height="427" HorizontalAlignment="Stretch" Background="#ECE4B7">
         <Button x:Name="BAutorisation" Content="Autorisation" HorizontalAlignment="Center" Height="60" Width="420" Margin="0,265,0,0"  VerticalAlignment="Top" Click="BAutorisation_Click"/>
-        <Button x:Name="BPaly" Content="Play game" HorizontalAlignment="Center" Height="60"  Margin="-215,115,0,0" VerticalAlignment="Top" Width="200" Click="BPaly_Click"/>
+        <Button x:Name="BPaly" Content="Play game" HorizontalAlignment="Center" Height="60"  Margin="-215,115,0,0" VerticalAlignment="Top" Width="200" Click="BPlay_Click"/>
         <Button x:Name="BRecordes" Content="Table recordes" HorizontalAlignment="Center" Height="60"  Margin="215,115,0,0" VerticalAlignment="Top" Width="200" Click="BRecordes_Click"/>
         <Button x:Name="BRegistration" Content="Registration" HorizontalAlignment="Center" Height="60" Width="420" Margin="0,190,0,0"  VerticalAlignment="Top" Click="BRegistration_Click_1"/>
         <Label x:Name="LMainMenu" Content="Main menu" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Gill Sans Ultra Bold Condensed"/>

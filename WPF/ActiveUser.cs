@@ -8,28 +8,34 @@ namespace WPF
 
         private static ActiveUser? _activeUser;
 
-        public static void SetNewUser(string name) => _activeUser = new ActiveUser(name);
+        public static void SetNewUser(string name) 
+            => _activeUser = new ActiveUser(name);
 
-        public static string? GetName() => _activeUser?.Name;
+        public static string? GetName() 
+            => _activeUser?.Name;
 
-        public static void Disactive() => _activeUser = null;
+        public static void Disactive() 
+            => _activeUser = null;
 
-        public static bool CheckActive() => _activeUser != null;
+        public static bool CheckActive()
+            => _activeUser != null;
 
-        public static void AddRecord(int round) 
+        public static void AddRecord(int round)
         {
-            TRecordes.Add(GetName(), round);
+            string? nameActiveUser = GetName();
+            TRecordes.Add(nameActiveUser, round);
         }
 
         public static bool UpdateRecord(int round) 
         {
-            if (TRecordes.Find($"{_activeUser.Name}").Round > round) 
+            if (TRecordes.Find($"{_activeUser?.Name}")?.Round > round) 
             {
                 return false;
             }
             else 
             {
-                TRecordes.Change(GetName(), round);
+                string? nameActiveUser = GetName();
+                TRecordes.Change(nameActiveUser, round);
                 return true;
             }
 

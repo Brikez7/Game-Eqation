@@ -1,35 +1,21 @@
 ﻿using MahApps.Metro.Controls;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using WPF.Classes;
 using WPF.Database;
 
 namespace WPF
 {
-    /// <summary>
-    /// Interaction logic for PRecordes.xaml
-    /// </summary>
     public partial class PRecordes : MetroWindow
     {
         public PRecordes()
         {
             InitializeComponent();
-            DataGridRecordes.ItemsSource = TRecordes.GetTable();
+            DataGridRecordes.ItemsSource = TRecordes.GetTable();///
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BSort_Click(object sender, RoutedEventArgs e)
         {
             DataGridRecordes.ItemsSource = TRecordes.Sort();
         }
@@ -52,19 +38,18 @@ namespace WPF
         {
             DataGridRecordes.ItemsSource = TRecordes.GetTable();
         }
-        private bool CheckFeildIsVoid(string enterName) 
-        {
-            if (enterName == "") 
-            {
-                MessageBox.Show("Field is void");
-            }
-            return enterName == "";
-        }
+
+        private static bool CheckFeildIsVoid(string enterName) 
+            => enterName == "";
+        
         private void BSearch_Click(object sender, RoutedEventArgs e)
         {
             string enterName = FName.Text;
             if (CheckFeildIsVoid(enterName))
+            {
+                MessageBox.Show("Field is void");
                 return;
+            }
 
             Record? record = new Record();
             if (TRecordes.Search(enterName, out record)) 

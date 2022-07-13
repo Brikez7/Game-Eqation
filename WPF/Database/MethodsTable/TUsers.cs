@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using WPF.Database;
 
 namespace WPF.Classes
@@ -8,9 +7,9 @@ namespace WPF.Classes
     {
         public static void Add(string name, string password) 
         {
-            using (Database.Database db = new Database.Database())
+            using (Database.Database db = new())
             {
-                User newUser = new User { NameUser = name, Password = password };
+                User newUser = new() { NameUser = name, Password = password };
 
                 db.Users.Add(newUser);
                 db.SaveChanges();
@@ -19,7 +18,7 @@ namespace WPF.Classes
 
         public static bool CheckPassword(string name, string password)
         {
-            using (Database.Database db = new Database.Database())
+            using (Database.Database db = new())
             {
                 var users = db.Users.ToList();
 
@@ -29,7 +28,7 @@ namespace WPF.Classes
 
         public static bool SearchUser(string name)
         {
-            using (Database.Database db = new Database.Database())
+            using (Database.Database db = new())
             {
                 var users = db.Users.ToList();
 
@@ -39,7 +38,7 @@ namespace WPF.Classes
 
         public static void Delete(string name)
         {
-            using (Database.Database db = new Database.Database())
+            using (Database.Database db = new())
             {
                 User? user = db.Users.FirstOrDefault(x => x.NameUser == name);
                 if (user != null)
@@ -52,7 +51,7 @@ namespace WPF.Classes
 
         public static void Change(string name, string newPassword)
         {
-            using (Database.Database db = new Database.Database())
+            using (Database.Database db = new())
             {
                 User? user = db.Users.FirstOrDefault(x => x.NameUser == name);
                 if (user != null)

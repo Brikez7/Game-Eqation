@@ -18,9 +18,9 @@
     TextOptions.TextFormattingMode="Ideal" 
     TextOptions.TextRenderingMode="Auto"        
     Background="#FFFAFAFA"
-    FontFamily="{DynamicResource MaterialDesignFont}" Height="578" Width="954" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown" Closing="Window_Closing" Icon="/premium-icon-game-control-4315508.png">
+    FontFamily="{DynamicResource MaterialDesignFont}" Height="578" Width="954" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown" Closing="Window_Closing" Icon="/premium-icon-game-control-4315508.png" ResizeMode="NoResize">
     <Grid x:Name="Grid" Background="#FFECE4B7">
-        <Button x:Name="BRegistration" Content="Registration" VerticalContentAlignment="Center" HorizontalAlignment="Center" Height="75" Margin="0,428,0,0" VerticalAlignment="Top" Width="450" Click="Button_Click"/>
+        <Button x:Name="BRegistration" Content="Registration" VerticalContentAlignment="Center" HorizontalAlignment="Center" Height="75" Margin="0,428,0,0" VerticalAlignment="Top" Width="450" Click="Registration_Click"/>
         <Label x:Name="LRegistration" Content="Registration" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="35" FontFamily="Gill Sans Ultra Bold Condensed"/>
         <Label x:Name="LName" Content="Name" HorizontalAlignment="Center" Margin="0,87,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="MV Boli" RenderTransformOrigin="0.635,-0.243" FontStretch="ExtraExpanded" FontStyle="Normal" FontWeight="Bold"/>
         <Label x:Name="LReplPassword" Content="Repeat Password" HorizontalAlignment="Center" Margin="0,302,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="MV Boli" FontStretch="ExtraExpanded" FontStyle="Normal" FontWeight="Bold"/>

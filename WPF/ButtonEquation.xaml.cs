@@ -32,13 +32,13 @@ namespace WPF
             UpdateInfoOnLabel += () => action();
         }
 
-        public ButtonEquation(double score = 100,double enemy = 10)
+        public ButtonEquation()
         {
             InitializeComponent();
             _equation = new Equation();
             GameButton.Content = _equation.GetEqution();
             _buttonEquations.Add(this);
-            game = new Game(score, enemy);
+            game = new Game(100, 10);
         }
 
         private static void UpdateAllButtonEquation() 
@@ -70,11 +70,11 @@ namespace WPF
             {
                 if (ActiveUser.UpdateRecord(lastRound))
                 {
-                    MessageBox.Show($"Your high score has been updated");
+                    MessageBox.Show($"Your high score {lastRound} and he has been updated");
                 }
                 else 
                 {
-                    MessageBox.Show($"Your high score {lastRound} and not been update\nTry again");
+                    MessageBox.Show($"Your previous record was higher\nTry again");
                 }
             }
             else 

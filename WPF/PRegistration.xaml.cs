@@ -32,7 +32,8 @@ namespace WPF
             }
             return nameUser == "" || password == "" || repitPassword == "";
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void Registration_Click(object sender, RoutedEventArgs e)
         {
             string nameUser = FName.Text;
             string password = FPassword.Text;

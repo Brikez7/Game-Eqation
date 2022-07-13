@@ -32,7 +32,7 @@ namespace WPF.Classes
         {
             using (Database.Database db = new Database.Database())
             {
-                List<Record> tableRecordes =  db.Recordes.ToList();
+                var tableRecordes =  db.Recordes.AsNoTracking().ToList();
                 return tableRecordes;
             }
         }

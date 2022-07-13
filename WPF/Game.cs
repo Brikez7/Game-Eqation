@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WPF.Tasking;
 
 namespace WPF
 {
@@ -12,7 +7,7 @@ namespace WPF
         private double _score;
         private int _round = 1;
         private double _enemy;
-        public static double _coficent { get; private set; }
+        public static double _coficent { get; private set; } = 0.3;
 
         public Game(double score, double enemy,double coficent = 0.5)
         {

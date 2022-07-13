@@ -5,9 +5,6 @@ using System.Windows.Input;
 
 namespace WPF
 {
-    /// <summary>
-    /// Interaction logic for PPlayGame.xaml
-    /// </summary>
     public partial class PPlayGame : MetroWindow
     {
         public PPlayGame()

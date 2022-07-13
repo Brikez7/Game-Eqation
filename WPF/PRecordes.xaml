@@ -18,7 +18,7 @@
     TextOptions.TextFormattingMode="Ideal" 
     TextOptions.TextRenderingMode="Auto"        
     Background="{DynamicResource MaterialDesignPaper}"
-    FontFamily="{DynamicResource MaterialDesignFont}" Height="459" Width="1070" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown" Closing="Window_Closing" Icon="/premium-icon-game-control-4315508.png">   
+    FontFamily="{DynamicResource MaterialDesignFont}" Height="459" Width="1070" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown" Closing="Window_Closing" Icon="/premium-icon-game-control-4315508.png" ResizeMode="NoResize">   
     <Grid x:Name="WRecordes" Margin="0,-4,0,-2" Background="#FFECE4B7" HorizontalAlignment="Right" Width="1074">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="745*"/>

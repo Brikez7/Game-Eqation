@@ -18,7 +18,7 @@
     TextOptions.TextFormattingMode="Ideal" 
     TextOptions.TextRenderingMode="Auto"        
     Background="{DynamicResource MaterialDesignPaper}"
-    FontFamily="{DynamicResource MaterialDesignFont}" Height="576" Width="1051" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown" Closing="Window_Closing" Icon="/premium-icon-game-control-4315508.png">
+    FontFamily="{DynamicResource MaterialDesignFont}" Height="576" Width="1051" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown" Closing="Window_Closing" Icon="/premium-icon-game-control-4315508.png" ResizeMode="NoResize">
     <Grid x:Name="Grid" Background="#FFECE4B7">
         <Button x:Name="BAutorisation" Content="Autorisation" HorizontalAlignment="Center" Height="75" Margin="0,420,0,0" VerticalAlignment="Top" Width="450" Click="Button_Click"/>
         <TextBox x:Name="FPassword" HorizontalAlignment="Center" Height="37" Margin="0,350,0,0" TextWrapping="Wrap" TextAlignment="Center" FontSize="25" VerticalAlignment="Top" Width="450" MaxLength="30" InputScope="Number" MaxLines="1"/>

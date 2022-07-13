@@ -75,7 +75,7 @@ namespace WPF.Tasking
 
         private int RandomCountDigit()
         {
-            return (_random.Next(1 + (int)(_coficent / 2), (int)(7 * _coficent)));
+            return (_random.Next(1 + (int)(_coficent / 2), (int)(10 * _coficent)));
         }
 
         private double RandomDigit()

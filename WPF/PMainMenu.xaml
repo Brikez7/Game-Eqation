@@ -18,7 +18,7 @@
     TextOptions.TextRenderingMode="Auto"   
     Background="Black"
     FontFamily="{DynamicResource MaterialDesignFont}" Width="893" Height="431" Foreground="Red"
-    Title="Главное меню" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" KeyDown="Menu_KeyDown" Closing="Menu_Closing" Icon="/premium-icon-game-control-4315508.png">
+    Title="Главное меню" FontSize="14" FontStyle="Normal" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" KeyDown="Menu_KeyDown" Closing="Menu_Closing" Icon="/premium-icon-game-control-4315508.png" ResizeMode="NoResize">
     <Grid x:Name="GWMain" VerticalAlignment="Center" Height="427" HorizontalAlignment="Stretch" Background="#ECE4B7">
         <Button x:Name="BAutorisation" Content="Autorisation" HorizontalAlignment="Center" Height="60" Width="420" Margin="0,265,0,0"  VerticalAlignment="Top" Click="BAutorisation_Click"/>
         <Button x:Name="BPaly" Content="Play game" HorizontalAlignment="Center" Height="60"  Margin="-215,115,0,0" VerticalAlignment="Top" Width="200" Click="BPaly_Click"/>

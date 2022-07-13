@@ -19,19 +19,19 @@
     TextOptions.TextFormattingMode="Ideal" 
     TextOptions.TextRenderingMode="Auto"        
     Background="{DynamicResource MaterialDesignPaper}"
-    FontFamily="{DynamicResource MaterialDesignFont}" WindowStartupLocation="CenterScreen" Closing="Window_Closing" KeyDown="WPlay_KeyDown" Icon="/premium-icon-game-control-4315508.png" IsVisibleChanged="WPlay_IsVisibleChanged" Width="1200" Height="540">
+    FontFamily="{DynamicResource MaterialDesignFont}" WindowStartupLocation="CenterScreen" Closing="Window_Closing" KeyDown="WPlay_KeyDown" Icon="/premium-icon-game-control-4315508.png" IsVisibleChanged="WPlay_IsVisibleChanged" Width="1200" Height="540" ResizeMode="NoResize">
     <Grid Background="#FFECE4B7" HorizontalAlignment="Left" Height="540" Width="1200" Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Label x:Name="LMainMenu" Content="Game" HorizontalAlignment="Left" Margin="520,10,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Gill Sans Ultra Bold Condensed"/>
         <Label x:Name="LScore" FontSize="30" Content="score:" HorizontalAlignment="Left" Margin="35,70,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LRound" FontSize="30" Content="Round:" HorizontalAlignment="Left" Margin="35,116,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LEnemy" FontSize="30" Content="Enemy:" HorizontalAlignment="Left" Margin="35,163,0,0" VerticalAlignment="Top"/>
         <local:ButtonEquation HorizontalAlignment="Left" Margin="35,365,0,0" VerticalAlignment="Top"/>
         <local:ButtonEquation HorizontalAlignment="Left" Margin="35,300,0,0" VerticalAlignment="Top"/>
         <local:ButtonEquation HorizontalAlignment="Left" Margin="415,300,0,0" VerticalAlignment="Top"/>
         <local:ButtonEquation HorizontalAlignment="Left" Margin="415,365,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="LRound" FontSize="30" Content="Round:" HorizontalAlignment="Left" Margin="35,116,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="LEnemy" FontSize="30" Content="Enemy:" HorizontalAlignment="Left" Margin="35,163,0,0" VerticalAlignment="Top"/>
         <local:ButtonEquation HorizontalAlignment="Left" Margin="795,300,0,0" VerticalAlignment="Top"/>
         <local:ButtonEquation HorizontalAlignment="Left" Margin="795,365,0,0" VerticalAlignment="Top"/>
         <local:ButtonEquation HorizontalAlignment="Left" Margin="35,430,0,0" VerticalAlignment="Top"/>
